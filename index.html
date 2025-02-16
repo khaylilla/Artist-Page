@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        .dark-mode {
+            background-color: #181818;
+            color: #f0f2f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode .navbar {
+            background: #222;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .navbar ul li a:hover {
+            text-decoration: underline;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        .navbar ul li a.active {
+            background-color: #555;
+            color: white;
+        }
+        .buttons button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .buttons button:hover {
+            background: #333;
+            color: white;
+            transform: scale(1.05);
+        }
+        .banner {
+            position: relative;
+            width: 90%;
+            margin: 30px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 40px;
+            text-align: left;
+            background: url('background.jpg') center/cover no-repeat;
+            color: white;
+        }
+        .banner img {
+            width: 300px;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            border-radius: 10px;
+        }
+        .content {
+            display: flex;
+            gap: 20px;
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+        }
+        .artwork, .artstyle, .available {
+            background: rgb(188, 214, 232);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        .artwork img {
+            width: 100px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        .artstyle p {
+            padding: 15px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .available {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .available a img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+        .available a img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    <script>
+        function activateTab(event, page) {
+            event.preventDefault();
+            document.querySelectorAll('.navbar ul li a').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            window.location.href = page;
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="darkmode.js" defer></script>
+
+</head>
+<body>
+
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
+        <span id="dark-mode-icon">🌙</span>
+    </button>
+
+    <div class="navbar">
+        <h2>Artist Page</h2>
+        <ul>
+            <li><a href="#" onclick="activateTab(event, 'index.html')">Home</a></li>
+            <li><a href="profile.html" onclick="activateTab(event, 'profile.html')">Profile</a></li>
+            <li><a href="artwork.html" onclick="activateTab(event, 'artwork.html')">Artwork</a></li>
+            <li><a href="speedpaint.html" onclick="activateTab(event, 'speedpaint.html')">Speedpaint</a></li>
+            <li><a href="contact.html" onclick="activateTab(event, 'contact.html')">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="banner">
+        <h1>Urie Mise</h1>
+        <p>A digital artist specializing in semi realistic-style artworks.</p>
+        <a href="Read More" onclick="activateTab(event, 'profile.html')">Read More</button></a>
+    </div>
+
+    <div class="content">
+        <div class="artwork">
+            <h3>Artwork</h3>
+            <img src="image1.jpg" alt="Art 1">
+            <img src="image2.jpg" alt="Art 2">
+            <a href="View More" onclick="activateTab(event, 'artwork.html')">View More</button></a>
+        </div>
+
+        <div class="artstyle">
+            <h3>Artstyle</h3>
+            <p>Semi Realistic</p>
+            <p>Gothic</p>
+            <p>Fairy Core</p>
+        </div>
+
+        <div class="available">
+            <h3>Available On</h3>
+            <a href="https://youtube.com/@khayli99" target="_blank">
+                <img src="youtube.png" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com/xxriemisee?igsh=MTJ6a2UzMnJ3M2FqMg== " target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://github.com/khaylilla" target="_blank">
+                <img src="github.png" alt="GitHub">
+            </a>
+            <a href="Contact —>" onclick="activateTab(event, 'artwork.html')">Contact —></button></a>
+        </div>
+    </div>
+</body>
+</html>

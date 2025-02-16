@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') center/cover no-repeat;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgb(255, 255, 255);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .navbar ul li a:hover, .navbar ul li a.active {
+            background-color: #555;
+            color: rgb(181, 198, 216);
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(220, 240, 245, 0.8);
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-info {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            background-color: #555;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #777;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.style.opacity = "1";
+        });
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="darkmode.js" defer></script>
+
+</head>
+<body style="opacity: 0;">
+
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
+        <span id="dark-mode-icon">🌙</span>
+    </button>
+
+    <div class="navbar">
+        <h2>Artist Page</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="artwork.html">Artwork</a></li>
+            <li><a href="speedpaint.html">Speedpaint</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <h1>Contact</h1>
+        <p class="contact-info">You can reach out via email:</p>
+        <p class="contact-info"><strong>Email:</strong> <a href="mailto:khaylillasi@gmail.com">khaylillasi@gmail.com</a></p>
+        <a href="index.html" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>
